@@ -13,8 +13,8 @@
 ### How to contribute
 
 1.  Fork the project & clone locally.
-2.  Create a branch, naming it contribute: git checkout -b contribute_to_diety
-3.  Push to the branch: git push origin contribute_to_diety
+2.  Create a branch, naming it contribute: git checkout -b contribute_to_pokemon_api
+3.  Push to the branch: git push origin contribute_to_pokemon_api
 4.  Create a pull request for your branch 🎉
 
 Note: be sure to keep your fork in sync!
