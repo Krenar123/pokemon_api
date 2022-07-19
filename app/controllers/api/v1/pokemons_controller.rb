@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module ApiError
+module Api
   module V1
-    class PokemonController < BaseController
+    class PokemonsController < BaseController
       def index
         @pokemons = Pokemon.all
 
@@ -15,10 +15,10 @@ module ApiError
 
       def show
         if params[:id].present?
-          @pokemon = Pokemon.find(params[:id])
+          @pokemon = Pokemon.find_by(id: params[:id])
 
           if @pokemon.present?
-            render json: @pokemon_return.to_json, show_all_details: true
+            render json: @pokemon.to_json, show_all_details: true
           else
             render json: { error: 'No pokemon found' }
           end

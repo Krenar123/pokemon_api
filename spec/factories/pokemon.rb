@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-FactoryBot.define do
+FactoryGirl.define do
   factory :pokemon do
     name { FFaker::Name.name }
     base_experience { FFaker::Number.number(digits: 3).to_s }

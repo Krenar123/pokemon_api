@@ -43,10 +43,14 @@ gem 'bootsnap', require: false
 # Fill the database with random stuff
 gem 'ffaker', '~> 2.12'
 
+gem 'faraday'
+gem 'oj'
+gem 'responders'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'factory_bot_rails'
+  gem 'factory_girl_rails', require: false
   gem 'rspec-rails'
   gem 'shoulda-matchers'
 end
