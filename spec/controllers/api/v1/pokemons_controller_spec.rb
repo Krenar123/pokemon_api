@@ -20,7 +20,7 @@ RSpec.describe Api::V1::PokemonsController, type: :controller do
 
     it 'returns error no pokemons found when there is no pokemon' do
       Pokemon.destroy_all
-      
+
       get :index
       expect(response.body).to eq('{"error":"No pokemons found"}')
     end

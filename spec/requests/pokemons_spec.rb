@@ -18,6 +18,12 @@ RSpec.describe 'Pokemons', type: :request do
       expect(pokemon.get_pokemon('bulbasaur')).to include('abilities')
     end
 
+    it 'should create the pokemon when name provided' do
+      pokemon.get_pokemon('bulbasaur')
+
+      expect(Pokemon.all.last.name).to eq('bulbasaur')
+    end
+
     it 'should raise error when wrong name provided' do
       expect { pokemon.get_pokemon('grounn') }.to raise_error(StandardError, 'Code: 404, response: Not Found')
     end
