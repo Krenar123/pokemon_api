@@ -14,7 +14,7 @@ module PokemonProxy
 
     def get_pokemon_names(po_data)
       return [] unless po_data['pokemon'].present?
-       
+
       po_data['pokemon'].map { |pokemon| pokemon['pokemon']['name'] }
     end
   end
