@@ -32,6 +32,8 @@ Install these software at first
 *  Rails (recommended version '7.0.2')
 *  Sqlite3 v => 1.4.4
 *  Bundler v => 2.3.6
+*  Sidekiq v ~> 6.4
+*  Sidekiq Cron v ~> 1.1
 
 #### Installation
 
