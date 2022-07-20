@@ -80,13 +80,13 @@ To run all tests run:
     pokemon = PokemonProxy::Pokemon.new
 ```
 
--> For getting all pokemons use method "get_pokemon" if no parameter provided will return all pokemons 
+###### For getting all pokemons use method "get_pokemon" if no parameter provided will return all pokemons 
 
 ```
     pokemon.get_pokemon
 ```
 
--> For getting a specific pokemon send an id or name as a parameter 
+###### For getting a specific pokemon send an id or name as a parameter 
 
 ```
     pokemon.get_pokemon(1)
@@ -102,13 +102,13 @@ or
     type = PokemonProxy::Type.new
 ```
 
--> For getting all types use method "get_type" if no parameter provided will return all types 
+###### For getting all types use method "get_type" if no parameter provided will return all types 
 
 ```
     type.get_type
 ```
 
--> For getting a specific type send an id or name as a parameter 
+###### For getting a specific type send an id or name as a parameter 
 
 ```
     type.get_type(1)
