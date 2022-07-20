@@ -44,7 +44,7 @@ gem 'bootsnap', require: false
 gem 'ffaker', '~> 2.12'
 
 # Background processing
-gem 'sidekiq', '~> 6.4'
+gem 'sidekiq', '~> 6.1.3'
 # And Cron
 gem 'sidekiq-cron', '~> 1.1'
 

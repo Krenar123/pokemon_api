@@ -26,4 +26,4 @@ hash = {
 }.freeze
 
 # Load scheduled jobs unless in test environment
-Sidekiq::Cron::Job.load_from_hash(hash) if !Rails.env.test? && !Rails.env.development?
+Sidekiq::Cron::Job.load_from_hash(hash)# if !Rails.env.test? && !Rails.env.development?
