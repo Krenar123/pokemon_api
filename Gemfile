@@ -43,6 +43,12 @@ gem 'bootsnap', require: false
 # Fill the database with random stuff
 gem 'ffaker', '~> 2.12'
 
+# Background processing
+gem 'sidekiq', '~> 6.4'
+# And Cron
+gem 'sidekiq-cron', '~> 1.1'
+
+# Api requests
 gem 'faraday'
 gem 'oj'
 gem 'responders'
@@ -56,9 +62,9 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_girl_rails', require: false
   gem 'rspec-rails'
-  gem 'shoulda-matchers'
   gem 'rspec-rails'
   gem 'rswag-specs'
+  gem 'shoulda-matchers'
 end
 
 group :development do
