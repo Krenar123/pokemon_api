@@ -50,6 +50,8 @@ Before that if you have problem connecting with database you might use `sudo ser
 Before running the server i recommend you tu run:
     `rails routes` -> to see every possible route that you want to request.
 
+Also make sure to run redis-server as we have 2 background jobs for fetching "Pokemons" and "Types" from PokeApi.
+
 After that you can start by typing in terminal:
     `rails server` -> to run the server ( check 'localhost:3000/{endpoints}')
 
