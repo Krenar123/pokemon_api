@@ -21,10 +21,14 @@ module PokemonProxy
     def to_types!(content)
       return unless content.present?
 
-      type = ::Type.create(parse_type(content))
-      connect_pokemon_and_type(content, type)
+      type = ::Type.create(parse_type(content)) unless type_exists?(content)
+      connect_pokemon_and_type(content, type) if type.present?
 
       content
+    end
+
+    def type_exists?(content)
+      ::Type.find_by(name: content['name']).present?
     end
   end
 end

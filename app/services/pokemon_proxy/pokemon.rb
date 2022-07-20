@@ -20,9 +20,13 @@ module PokemonProxy
     def to_pokemons!(content)
       return unless content.present?
 
-      ::Pokemon.create(parse_pokemon(content))
+      ::Pokemon.create(parse_pokemon(content)) unless pokemon_exists?(content)
 
       content
+    end
+
+    def pokemon_exists?(content)
+      ::Pokemon.find_by(name: content['name']).present?
     end
   end
 end

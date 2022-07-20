@@ -48,7 +48,7 @@ RSpec.describe 'Pokemons', type: :request do
     it 'should create the type when name provided' do
       type.get_type('ground')
 
-      expect(Type.all.last.name).to eq('ground')
+      expect(Type.find_by(name: 'ground').present?).to eq(true)
     end
 
     context 'when pokemon is created and the type has relation with it' do
