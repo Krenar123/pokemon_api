@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-**PokemonAPI** it is a restful api, implemented an external api "Pokemon api" also added some logic on backend for receiving "Pokemons" and "Types" etc...
+**PokemonAPI** it is a REST-api with only two enpoints(you can check them on the bottom of documentation), which has integrated an external api "PokeApi" for fetching(importing) "Pokemons" and "Types".
 
 ## Contribution
 
@@ -28,7 +28,7 @@ Note: be sure to keep your fork in sync!
 Install these software at first
 
 
-*  Ruby (recommended version => '3.1.0') - we recommend to use rbenv for installation
+*  Ruby (recommended version => '3.1.0')
 *  Rails (recommended version '7.0.2')
 *  Sqlite3 v => 1.4.4
 *  Bundler v => 2.3.6
