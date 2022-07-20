@@ -95,7 +95,7 @@ or
 ##### Types
 
 ```
-    type = PokemonProxy::Pokemon.new
+    type = PokemonProxy::Type.new
 ```
 
 -> For getting all types use method "get_type" if no parameter provided will return all types 

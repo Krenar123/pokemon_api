@@ -30,7 +30,8 @@ RSpec.describe 'Pokemons', type: :request do
   end
 
   describe 'requesting type' do
-    let(:type) { PokemonProxy::Pokemon.new }
+    let(:type) { PokemonProxy::Type.new }
+    let(:pokemon) { PokemonProxy::Pokemon.new }
 
     it 'should render all types when no id or name provided' do
       expect(type.get_type.keys).to match_array(%w[count next previous results])
@@ -52,7 +53,7 @@ RSpec.describe 'Pokemons', type: :request do
 
     context 'when pokemon is created and the type has relation with it' do
       it 'should connect pokemon and type' do
-        type.get_pokemon('pidgey')
+        pokemon.get_pokemon('pidgey')
         type.get_type(1)
 
         expect(PokemonTypeRelation.all.count).not_to eq(0)
