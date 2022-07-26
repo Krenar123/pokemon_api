@@ -7,24 +7,18 @@ module Api
         @pokemons = Pokemon.all
 
         if @pokemons.present?
-          render json: @pokemons.to_json
+          render json: @pokemons, each_serializer: PokemonBaseSerializer
         else
-          render json: { error: 'No pokemons found' }
+          render json: { error: 'No pokemons found' }, status: :not_found
         end
       end
 
       def show
-        if params[:id].present?
-          @pokemon = Pokemon.find_by(id: params[:id])
-
-          if @pokemon.present?
-            render json: @pokemon.to_json, show_all_details: true
-          else
-            render json: { error: 'No pokemon found' }
-          end
-        else
-          render json: { error: 'No params provided' }
-        end
+        @pokemon = Pokemon.find(params[:id])
+        
+        render json: @pokemon, each_serializer: CompletePokemonSerializer
+      rescue StandardError
+        render json: { error: 'No pokemon found' }, status: :not_found
       end
     end
   end

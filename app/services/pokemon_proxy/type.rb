@@ -13,10 +13,18 @@ module PokemonProxy
         endpoint: "type/#{name_or_id}"
       )
 
+      return each_type(content['results']) if content['results'].present?
+
       to_types!(content)
     end
 
     private
+
+    def each_type(content)
+      content.each do |po_data|
+        get_type(po_data['name'])
+      end
+    end
 
     def to_types!(content)
       return unless content.present?
