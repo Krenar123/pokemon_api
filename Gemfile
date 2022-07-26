@@ -62,9 +62,9 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_girl_rails', require: false
   gem 'rspec-rails'
-  gem 'rspec-rails'
   gem 'rswag-specs'
   gem 'shoulda-matchers'
+  gem 'webmock'
 end
 
 group :development do
